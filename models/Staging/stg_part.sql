@@ -8,7 +8,7 @@
               P_SIZE as size,
               P_CONTAINER as container,
               P_RETAILPRICE as retail_price
-          from {{ source('tpch_sf1000', 'part') }}
+          from {{ source('tpch_sf1', 'part') }}
       )
       select *
       from part_source_data

@@ -16,7 +16,7 @@
               L_SHIPINSTRUCT as ship_instruct,
               L_SHIPMODE as ship_mode,
               L_COMMENT as comment
-          from {{ source('tpch_sf1000', 'lineitem') }}
+          from {{ source('tpch_sf1', 'lineitem') }}
       )
       select *
       from lineitem_source_data

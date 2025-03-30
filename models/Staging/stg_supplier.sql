@@ -7,7 +7,7 @@ with supplier_source_data as (
               S_PHONE as phone,
               S_ACCTBAL as account_balance,
               S_COMMENT as comment
-          from {{ source('tpch_sf1000', 'supplier') }}
+          from {{ source('tpch_sf1', 'supplier') }}
       )
       select *
       from supplier_source_data

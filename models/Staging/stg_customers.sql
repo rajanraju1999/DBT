@@ -8,7 +8,7 @@ with customer_source_data as (
         C_ACCTBAL as account_balance,
         C_MKTSEGMENT as market_segment,
         C_COMMENT as customer_comment
-    from {{ source('tpch_sf1000', 'customer') }}
+    from {{ source('tpch_sf1', 'customer') }}
 )
 
 select *
