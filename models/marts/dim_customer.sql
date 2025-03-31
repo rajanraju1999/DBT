@@ -11,5 +11,6 @@ with customer_data as (
     from {{ ref('stg_customers') }}
 )
 
+
 select *
 from customer_data
