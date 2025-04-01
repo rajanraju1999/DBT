@@ -40,4 +40,7 @@ models:
     # Applies to all files under models/example/
     marts:
       +materialized: table
+    stg_sales_data_incremental:
+      materialized: incremental
+
     

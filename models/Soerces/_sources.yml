@@ -11,7 +11,24 @@ sources:
       - name: "part"
       - name: "supplier"
 
-      
-
-
-
+  - name: dbt_demo_sources  # Custom name for your source
+    database: DBT_DEMO  # The Snowflake database
+    schema: SOURCES  # The schema in Snowflake where your table is
+    tables:
+      - name: sales_data  # Name of the table
+        description: "This table contains sales data for orders."
+        columns:
+          - name: order_id
+            description: "Unique identifier for the order"
+          - name: product_id
+            description: "Identifier for the product ordered"
+          - name: quantity
+            description: "Quantity of the product ordered"
+          - name: total_price
+            description: "Total price of the order"
+          - name: order_date
+            description: "Date when the order was placed"
+          - name: ship_date
+            description: "Date when the order was shipped"
+          - name: customer_id
+            description: "Identifier for the customer who placed the order"
