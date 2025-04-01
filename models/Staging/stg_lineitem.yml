@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: stg_lineitem
+    description: "Staging model for line item data"
+    columns:
+      - name: order_key
+        description: "Foreign key referencing the orders table"
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stg_orders')
+              field: order_key
+
+      - name: return_flag
+        description: "Return flag should have specific values"
+        tests:
+          - accepted_values:
+              values: ["R", "N", "A"]
