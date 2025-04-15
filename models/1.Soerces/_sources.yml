@@ -10,6 +10,8 @@ sources:
       - name : "lineitem"
       - name: "part"
       - name: "supplier"
+      - name : "nation"
+      - name : "region"
 
   - name: dbt_demo_sources  # Custom name for your source
     database: DBT_DEMO  # The Snowflake database

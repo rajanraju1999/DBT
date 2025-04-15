@@ -1,3 +1,6 @@
+ 
+{{ config(materialized='table') }}
+
   with part_data as (
           select
               part_key,
@@ -10,5 +13,8 @@
               retail_price
           from {{ ref('stg_part') }}
       )
-      select *
-      from part_data
+select *
+from part_data
+
+
+
