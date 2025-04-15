@@ -4,7 +4,7 @@
 
 WITH raw_dates AS (
     SELECT DATEADD(day, SEQ4(), '1992-01-01') AS date_day
-    FROM TABLE(GENERATOR(ROWCOUNT => 10000))
+    FROM TABLE(GENERATOR(ROWCOUNT => 20000))
 ),
 
 dates AS (
