@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: stg_orders
+    description: "Staging model for the orders table from the tpch_sf1 source"
+    config:
+      materialized: view
+
+    columns:
+      - name: order_key
+        description: "Primary key of the order"
+        tests:
+          - unique
+          - not_null
+
+      - name: customer_key
+        description: "Foreign key referencing the customer"
+
+      - name: order_status
+        description: "Status of the order"
+
+      - name: total_price
+        description: "Total price of the order"
+
+      - name: order_date
+        description: "Date when the order was placed"
+        tests:
+          - not_null
+
+      - name: order_priority
+        description: "Priority of the order"
+
+      - name: clerk
+        description: "Clerk who handled the order"
+
+      - name: ship_priority
+        description: "Priority assigned for shipping"

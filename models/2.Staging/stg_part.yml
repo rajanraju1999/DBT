@@ -1,0 +1,37 @@
+version: 2
+
+models:
+  - name: stg_part
+    description: "Staging model for the part table from the tpch_sf1 source"
+    config:
+      materialized: view
+
+    columns:
+      - name: part_key
+        description: "Primary key for the part"
+        tests:
+          - unique
+          - not_null
+
+      - name: name
+        description: "Name of the part"
+
+      - name: manufacturer
+        description: "Manufacturer of the part"
+
+      - name: brand
+        description: "Brand of the part"
+
+      - name: type
+        description: "Type/category of the part"
+
+      - name: size
+        description: "Size of the part"
+
+      - name: container
+        description: "Container description"
+
+      - name: retail_price
+        description: "Retail price of the part"
+
+

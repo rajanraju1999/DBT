@@ -17,3 +17,45 @@ models:
         tests:
           - accepted_values:
               values: ["R", "N", "A"]
+
+      - name: part_key
+        description: "Foreign key to the part table"
+
+      - name: supplier_key
+        description: "Foreign key to the supplier table"
+
+      - name: line_number
+        description: "Line number of the item in the order"
+
+      - name: quantity
+        description: "Quantity ordered"
+
+      - name: extended_price
+        description: "Extended price for the item"
+
+      - name: discount
+        description: "Discount applied to the item"
+
+      - name: tax
+        description: "Tax applied to the item"
+
+      - name: line_status
+        description: "Current status of the line item"
+
+      - name: ship_date
+        description: "Date the item was shipped"
+
+      - name: commit_date
+        description: "Date by which the item was committed for shipment"
+
+      - name: receipt_date
+        description: "Date the item was received"
+
+      - name: ship_instruct
+        description: "Shipping instructions"
+
+      - name: ship_mode
+        description: "Shipping mode"
+
+      - name: comment
+        description: "Comment or note on the line item"

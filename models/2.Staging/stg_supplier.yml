@@ -1,0 +1,29 @@
+version: 2
+
+models:
+  - name: stg_supplier
+    description: "Staging model for the supplier table from the tpch_sf1 source"
+    config:
+      materialized: view
+
+    columns:
+      - name: supplier_key
+        description: "Primary key for the supplier"
+        tests:
+          - unique
+          - not_null
+
+      - name: name
+        description: "Supplier's name"
+
+      - name: address
+        description: "Supplier's address"
+
+      - name: nation_key
+        description: "Foreign key to the nation table"
+
+      - name: phone
+        description: "Supplier's phone number"
+
+      - name: account_balance
+        description: "Supplier's account balance"

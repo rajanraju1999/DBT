@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg_nation
+    description: "Staging model for the nation table from the tpch_sf1 source"
+    config:
+      materialized: view
+
+    columns:
+      - name: nation_key
+        description: "Primary key of the nation"
+        tests:
+          - unique
+          - not_null
+
+      - name: nation_name
+        description: "Name of the nation"
+        tests:
+          - not_null
+
+      - name: region_key
+        description: "Foreign key to the region table"

@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: stg_region
+    description: "Staging model for the region table from the tpch_sf1 source"
+    config:
+      materialized: view
+
+    columns:
+      - name: region_key
+        description: "Primary key for the region"
+        tests:
+          - unique
+          - not_null
+
+      - name: region_name
+        description: "Name of the region"
