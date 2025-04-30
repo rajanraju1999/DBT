@@ -12,7 +12,9 @@ SELECT
     ol.tax,
     ol.ship_date,
     ol.commit_date,
-    ol.receipt_date
+    ol.receipt_date,
+    ol.region_key,
+    ol.region_name
 FROM {{ ref('int_order_lineitem') }} ol
 
 
