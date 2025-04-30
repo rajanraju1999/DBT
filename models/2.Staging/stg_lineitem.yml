@@ -15,6 +15,7 @@ models:
       - name: return_flag
         description: "Return flag should have specific values"
         tests:
+          
           - accepted_values:
               values: ["R", "N", "A"]
 
